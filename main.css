@@ -31,8 +31,17 @@ background: linear-gradient(90deg, rgba(23,44,196,1) 0%, rgba(86,37,236,1) 5%, r
     left: 0;
     color: #fff;
    }
-   .img{float:right; margin:20px;
-border-radius: 50%;}
+   .img{float:right; margin:30px;
+border-radius: 50%;
+-webkit-box-shadow:0px 0px 229px 8px rgba(44,219,232,1);
+-moz-box-shadow: 0px 0px 229px 8px rgba(44,219,232,1);
+box-shadow: 0px 0px 229px 8px rgba(44,219,232,1);
+transition: 1.5s;
+}
+.img:hover{-webkit-box-shadow:0px 0px 227px 34px rgba(241,38,255,1);
+    -moz-box-shadow: 0px 0px 227px 34px rgba(241,38,255,1);
+    box-shadow: 0px 0px 227px 34px rgba(241,38,255,1);}
+
 .card{float: left;
 margin: 30px;
 border: 0;}
