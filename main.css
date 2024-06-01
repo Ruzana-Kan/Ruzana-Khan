@@ -1,0 +1,53 @@
+*{margin:0;padding:0;box-sizing: border-box;font-family: sans-serif;background-color: black;}
+nav img{border-radius:50%;}
+nav ul {
+    list-style-type: none;
+   }
+   nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+   }
+   nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+   }
+   nav ul li a::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    color: #fff;
+background: linear-gradient(90deg, rgba(23,44,196,1) 0%, rgba(86,37,236,1) 5%, rgba(105,35,212,1) 11%, rgba(48,230,221,1) 27%, rgba(65,222,170,1) 39%, rgba(224,255,158,1) 45%, rgba(249,222,172,1) 53%, rgba(233,63,235,1) 59%, rgba(106,202,251,1) 67%, rgba(55,185,242,1) 72%, rgba(39,231,246,1) 80%, rgba(147,55,238,1) 88%, rgba(242,50,228,1) 95%, rgba(240,165,186,1) 100%);
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    transition: all 0.9s linear;
+   }
+   
+   nav ul li a:hover::after {
+    left: 0;
+    color: #fff;
+   }
+   .img{float:right; margin:20px;
+border-radius: 50%;}
+.card{float: left;
+margin: 30px;
+border: 0;}
+
+.card h1{background: -webkit-linear-gradient(153deg, rgba(0,255,248,1) 0%, rgba(105,255,149,1) 0%, rgba(115,250,223,1) 12%, rgba(65,255,227,1) 20%, rgba(32,255,241,1) 29%, rgba(41,193,255,1) 36%, rgba(3,127,255,1) 53%, rgba(0,40,255,1) 60%, rgba(63,0,255,1) 66%, rgba(149,0,255,1) 71%, rgba(115,0,255,1) 87%, rgba(45,253,142,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
+.navbar-brand{background: -webkit-linear-gradient(153deg, rgba(126,7,245,1) 0%, rgba(29,218,253,1) 35%, rgba(69,252,173,1) 60%, rgba(255,197,130,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+    .card i{margin:10px;font-size:36px;
+        background: -webkit-linear-gradient(115deg, rgba(9,204,255,1) 0%, rgba(9,234,247,1) 35%, rgba(69,252,173,1) 71%, rgba(255,197,130,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 1.5s;  
+    }    
+    .card i:hover{margin: 30px;}
