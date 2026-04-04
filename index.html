@@ -1,263 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruzana Khan - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruzana Khan — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img.png">
 <link rel="stylesheet" href="main.css">
-
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">RK</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Ruzana Khan</h1>
-            <p class="subtitle">Software Engineer • Web Developer • Taekwondo Champion</p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">Learn More</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
+<!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-logo">RK</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-num" id="loaderNum">0%</div>
+</div>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="profile-image"><img src="img.png" height="240" width="240"></div>
-            <div class="about-text">
-                <p>Highly motivated and skilled high school student with a strong passion for software engineering, web design and development. I combine technical expertise with leadership experience, having served in various roles from Media Secretary to President in multiple organizations.</p>
-                <p>Based in Dhaka, Bangladesh, I'm dedicated to creating innovative solutions and continuously expanding my skills in programming and web development. My journey spans from competitive Taekwondo to cutting-edge technology, always striving for excellence.</p>
-            </div>
-        </div>
-    </section>
+<canvas id="particleCanvas"></canvas>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="ambient ambient-1"></div>
+<div class="ambient ambient-2"></div>
+<div class="ambient ambient-3"></div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="fade-in">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">PHP</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Web Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">jQuery</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">Laravel</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Core Competencies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Web Development</span>
-                    <span class="skill-tag">Project Management</span>
-                    <span class="skill-tag">Prompt Engineering</span>
-                    <span class="skill-tag">Negotiation</span>
-                </div>
-            </div>
-                 <div class="skill-category">
-                <h3>Digital Marketing skills</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">On Page SEO</span>
-                    <span class="skill-tag">Off Page SEO</span>
-                    <span class="skill-tag">Facebook Marketing</span>
-                    <span class="skill-tag">X Marketing</span>
-                    <span class="skill-tag">Pinterest Marketing</span>
-                    <span class="skill-tag">Linkedin Marketing</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="logo">RK</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#achievements">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Experience Section -->
-    <section id="experience" class="fade-in">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">January 2024 - January 2025</div>
-                <h3 class="timeline-title">President</h3>
-                <div class="timeline-company">SAGC Taekwondo Club</div>
-                <p>Led the club operations and strategic initiatives, overseeing all activities and member development programs.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">January 2024 - January 2025</div>
-                <h3 class="timeline-title">Campus Ambassador</h3>
-                <div class="timeline-company">Nova Verse</div>
-                <p>Represented the organization and promoted engagement within the campus community.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">January 2024 - January 2025</div>
-                <h3 class="timeline-title">Campus Ambassador</h3>
-                <div class="timeline-company">BAF Shaheen College Kurmitola</div>
-                <p>Facilitated communication and engagement between the institution and student body.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">January 2023 - December 2024</div>
-                <h3 class="timeline-title">Vice President</h3>
-                <div class="timeline-company">SAGC Taekwondo Club</div>
-                <p>Supported club leadership and managed operational activities, contributing to organizational growth.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">July 2023 - December 2023</div>
-                <h3 class="timeline-title">Senior Social Media Executive</h3>
-                <div class="timeline-company">Yes for Youth</div>
-                <p>Managed social media strategies and content creation, enhancing digital presence and engagement.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">January 2022 - December 2023</div>
-                <h3 class="timeline-title">Media and Publication Secretary</h3>
-                <div class="timeline-company">SAGC Taekwondo Club</div>
-                <p>Coordinated media activities and publications, managing communication strategies for the organization.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="fade-in">
-        <h2 class="section-title">Achievements & Awards</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <div class="achievement-year">2024</div>
-                <div class="achievement-text">1. Mastering Crowd Management Diploma from Alison <br>2. Physical Fitness Diploma from Alison</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-year">2023</div>
-                <div class="achievement-text">1. Top 10 Percentile Young Coder Certificate</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-year">2022</div>
-                <div class="achievement-text">1. Top 10 Percentile Young Coder Certificate <br>2. Bronze Medal from Seoul National University International Taekwondo Championship</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-year">2021</div>
-                <div class="achievement-text">1. Course Completion and 3rd Prize Winner for Projects at Serve Human Foundation</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-year">2019</div>
-                <div class="achievement-text">1. Gold Medal at Trust Bank Limited Taekwondo National Competition</div>
-            </div>
-        </div>
-
-        <!-- Certificates Section -->
-    <section id="certificates">
-        <h2 class="section-title">Certifications</h2>
-        
-        <div class="carousel-container">
-            <div class="carousel-track" id="carouselTrack">
-                <!-- Certificates will be populated by JavaScript -->
-            </div>
-        </div>
-
-        <div class="carousel-nav">
-            <button class="carousel-btn" id="prevBtn" aria-label="Previous">‹</button>
-            <button class="carousel-btn" id="nextBtn" aria-label="Next">›</button>
-        </div>
-
-        <div class="carousel-dots" id="carouselDots"></div>
-        
-        <div class="carousel-counter" id="counter"></div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">×</button>
-        <img class="lightbox-content" id="lightboxImage" src="" alt="Certificate">
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <!-- Floating badges -->
+  <div class="hero-badge b1">⚡ Software Engineer</div>
+  <div class="hero-badge b2">🥇 National Champion</div>
+  <div class="hero-badge b3">🚀 CEO & Founder</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Dhaka, Bangladesh</div>
+    <h1>Ruzana<br><em class="glitch" data-text="Khan">Khan</em></h1>
+    <p class="hero-subtitle">
+      Software Engineer <span class="sep">·</span> Web Developer <span class="sep">·</span> Taekwondo Champion<span class="sep">·</span> Digital Marketer
+    </p>
+    <div class="hero-btns">
+      <a href="#about" class="btn-glass btn-primary-new"><span>Explore My Work</span></a>
+      <a href="#contact" class="btn-glass btn-outline"><span>Get In Touch</span></a>
     </div>
-    </section>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <!-- Languages Section -->
-    <section id="languages" class="fade-in">
-        <h2 class="section-title">Languages</h2>
-        <div class="languages-grid">
-            <div class="language-item">
-                <div class="language-name">Bangla</div>
-                <div class="language-level">Hyper Intermediate</div>
-            </div>
-            <div class="language-item">
-                <div class="language-name">English</div>
-                <div class="language-level">Intermediate</div>
-            </div>
-            <div class="language-item">
-                <div class="language-name">Japanese</div>
-                <div class="language-level">Elementary</div>
-            </div>
-            <div class="language-item">
-                <div class="language-name">Hindi</div>
-                <div class="language-level">Elementary</div>
-            </div>
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-label">01 — About</div>
+  <div class="section-title">A builder,<br><em>a leader,</em><br>a champion.</div>
+  <div class="about-grid">
+    <div class="profile-wrap reveal">
+      <div class="profile-frame">
+        <div class="orbit-wrap">
+          <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+          <div class="orbit orbit-2"><div class="orbit-dot orbit-dot-2"></div></div>
         </div>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <strong>Location</strong><br>
-                        Dhaka, 1206, Bangladesh
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div>
-                        <strong>Phone</strong><br>
-                        +880 1575451703
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <div>
-                        <strong>Email</strong><br>
-                        ruzanakhan15@gmail.com
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3 style="text-align: center; margin-bottom: 2rem; color: #667eea;">Connect With Me</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/ruzana.khan.503/" class="social-link" title="Facebook">f</a>
-                    <a href="https://x.com/RuzanaKhan369" class="social-link" title="X (Twitter)">X</a>
-                    <a href="https://bd.linkedin.com/in/ruzana-khan-238397257" class="social-link" title="LinkedIn">in</a>
-                    <a href="https://github.com/Ruzana-Kan" class="social-link" title="GitHub">⚡</a>
-                </div>
-            </div>
+        <img src="img.png" alt="Ruzana Khan">
+      </div>
+      <div class="profile-meta">
+        <div class="profile-name">Ruzana Khan</div>
+        <div class="profile-role">Software Engineer & Web Developer</div>
+        <div class="profile-loc">📍 Dhaka, Bangladesh</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="about-text">
+        <p>Highly motivated and skilled <strong>high school student</strong> with a strong passion for software engineering, web design and development. I combine technical expertise with leadership experience, having served in various roles from Media Secretary to President.</p>
+        <p>Based in Dhaka, Bangladesh, I'm dedicated to creating innovative solutions and continuously expanding my skills in programming and web development. My journey spans from competitive <strong>Taekwondo</strong> to cutting-edge technology — always striving for excellence in everything I do.</p>
+        <p>Currently founded <strong>Next Innovation</strong> and serving as its CEO, I lead technical initiatives in digital education and technology solutions while managing teams and driving growth.</p>
+      </div>
+      <div class="about-stats stagger-children">
+        <div class="stat-box">
+          <div class="stat-num"><span class="count-up" data-target="10">0</span>+</div>
+          <div class="stat-lbl">Leadership Roles</div>
         </div>
-    </section>
+        <div class="stat-box">
+          <div class="stat-num"><span class="count-up" data-target="35">0</span>+</div>
+          <div class="stat-lbl">Certifications</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">🥇</div>
+          <div class="stat-lbl">National Champion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="main.js"></script>
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<div class="skills-bg">
+  <section id="skills" class="section skills-wrap">
+    <div class="section-label">02 — Skills</div>
+    <div class="section-title reveal">Expertise &<br><em>Capabilities</em></div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon" style="background:rgba(192,132,252,.15)">⚡</div>
+        <h3>Programming Languages</h3>
+        <div class="skill-tags-new">
+          <span class="stag">C</span><span class="stag">Python</span><span class="stag">JavaScript</span><span class="stag">PHP</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon" style="background:rgba(103,232,249,.15)">🌐</div>
+        <h3>Web Technologies</h3>
+        <div class="skill-tags-new">
+          <span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">jQuery</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon" style="background:rgba(52,211,153,.15)">🔧</div>
+        <h3>Frameworks & Libraries</h3>
+        <div class="skill-tags-new">
+          <span class="stag">Bootstrap</span><span class="stag">Laravel</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon" style="background:rgba(251,191,36,.15)">🧠</div>
+        <h3>Core Competencies</h3>
+        <div class="skill-tags-new">
+          <span class="stag">Problem Solving</span><span class="stag">Web Development</span><span class="stag">Project Management</span><span class="stag">Prompt Engineering</span><span class="stag">Negotiation</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon" style="background:rgba(240,171,252,.15)">📣</div>
+        <h3>Digital Marketing</h3>
+        <div class="skill-tags-new">
+          <span class="stag">On-Page SEO</span><span class="stag">Off-Page SEO</span><span class="stag">Facebook</span><span class="stag">X Marketing</span><span class="stag">Pinterest</span><span class="stag">LinkedIn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="section-label">03 — Experience</div>
+  <div class="section-title reveal">Career<br><em>Journey</em></div>
+  <div class="timeline-new">
+    <div class="tl-line"></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2026<br>Present</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">CEO & Founder</div><div class="tl-company">Next Innovation</div><div class="tl-desc">Led strategic initiatives and technical development at Next Innovation, overseeing platform growth, managing projects, and driving innovation in digital education and technology solutions.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2026<br>Present</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Technical Manager</div><div class="tl-company">Battle of Brains</div><div class="tl-desc">Led the organization and technical management of Battle of Brains, overseeing event operations, coordinating teams, and ensuring seamless execution of all technical aspects.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Nov 2025<br>Dec 2025</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Campus Ambassador</div><div class="tl-company">TEDx</div><div class="tl-desc">Represented TEDx as a Campus Ambassador, leading community engagement, promoting events, and connecting students with ideas worth spreading.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2024<br>Jan 2026</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">President</div><div class="tl-company">SAGC Taekwondo Club</div><div class="tl-desc">Led the club operations and strategic initiatives, overseeing all activities and member development programs.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2024<br>Present</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Main Advisor</div><div class="tl-company">Runa's Technology (YouTube)</div><div class="tl-desc">Serving as the main advisor, guiding content strategy, overseeing technical direction, and driving audience growth through impactful digital content.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2024<br>Jan 2025</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Campus Ambassador</div><div class="tl-company">Nova Verse & BAF Shaheen College</div><div class="tl-desc">Represented the organizations and promoted engagement within the campus community, facilitating communication between institutions and student body.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2023<br>Dec 2024</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Vice President</div><div class="tl-company">SAGC Taekwondo Club</div><div class="tl-desc">Supported club leadership and managed operational activities, contributing to organizational growth and member development.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jul 2023<br>Dec 2023</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Senior Social Media Executive</div><div class="tl-company">Yes for Youth</div><div class="tl-desc">Managed social media strategies and content creation, enhancing digital presence and community engagement.</div></div></div></div>
+    <div class="tl-item"><div class="tl-date-col"><div class="tl-date">Jan 2022<br>Dec 2023</div></div><div class="tl-body-col"><div class="tl-dot"></div><div class="tl-card"><div class="tl-role">Media & Publication Secretary</div><div class="tl-company">SAGC Taekwondo Club</div><div class="tl-desc">Coordinated media activities and publications, managing communication strategies for the organization.</div></div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <div class="section-label">04 — Achievements</div>
+  <div class="section-title reveal">Awards &<br><em>Recognition</em></div>
+  <div class="ach-grid">
+    <div class="ach-card reveal"><div class="ach-year">2025</div><ul class="ach-items"><li>Executive Diploma in Business Communication — UniAthena</li><li>1st Prize at Bossgiri GK Quiz</li></ul></div>
+    <div class="ach-card reveal"><div class="ach-year">2024</div><ul class="ach-items"><li>Mastering Crowd Management Diploma — Alison</li><li>Physical Fitness Diploma — Alison</li></ul></div>
+    <div class="ach-card reveal"><div class="ach-year">2023</div><ul class="ach-items"><li>Top 10 Percentile Young Coder Certificate</li></ul></div>
+    <div class="ach-card reveal"><div class="ach-year">2022</div><ul class="ach-items"><li>Top 10 Percentile Young Coder Certificate</li><li>🥉 Bronze Medal — Seoul National University International Taekwondo Championship</li></ul></div>
+    <div class="ach-card reveal"><div class="ach-year">2021</div><ul class="ach-items"><li>Course Completion & 3rd Prize for Projects — Serve Human Foundation</li></ul></div>
+    <div class="ach-card reveal"><div class="ach-year">2019</div><ul class="ach-items"><li>🥇 Gold Medal — Trust Bank Limited Taekwondo National Competition</li></ul></div>
+  </div>
+
+  <div style="margin-top:5rem">
+    <div class="section-label">Certifications</div>
+    <div class="section-title reveal" style="margin-bottom:2.5rem">My<br><em>Certificates</em></div>
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack"></div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn">‹</button>
+      <button class="carousel-btn" id="nextBtn">›</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="carousel-counter" id="counter"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">×</button>
+  <img class="lightbox-content" id="lightboxImage" src="" alt="Certificate">
+</div>
+
+<div class="divider"></div>
+
+<!-- LANGUAGES -->
+<section id="languages" class="section">
+  <div class="section-label">05 — Languages</div>
+  <div class="section-title reveal">Linguistic<br><em>Reach</em></div>
+  <div class="lang-grid">
+    <div class="lang-card reveal"><div class="lang-name">Bangla</div><div class="lang-level">Native / Hyper Intermediate</div><div class="lang-bar"><div class="lang-fill" style="--w:1"></div></div></div>
+    <div class="lang-card reveal"><div class="lang-name">English</div><div class="lang-level">Intermediate</div><div class="lang-bar"><div class="lang-fill" style="width:65%"></div></div></div>
+    <div class="lang-card reveal"><div class="lang-name">Japanese</div><div class="lang-level">Elementary</div><div class="lang-bar"><div class="lang-fill" style="width:25%"></div></div></div>
+    <div class="lang-card reveal"><div class="lang-name">Hindi</div><div class="lang-level">Elementary</div><div class="lang-bar"><div class="lang-fill" style="width:25%"></div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-label">06 — Contact</div>
+  <div class="section-title reveal">Let's<br><em>Connect</em></div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="contact-item"><div class="c-icon">📍</div><div><div class="c-label">Location</div><div class="c-value">Dhaka, 1206, Bangladesh</div></div></div>
+      <div class="contact-item"><div class="c-icon">📞</div><div><div class="c-label">Phone</div><div class="c-value">+880 1575451703</div></div></div>
+      <div class="contact-item"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-value">ruzanakhan15@gmail.com</div></div></div>
+    </div>
+    <div class="reveal">
+      <div class="connect-title">Find me on<br><em style="color:var(--accent1)">social media</em></div>
+      <div class="social-grid">
+        <a href="https://www.facebook.com/ruzana.khan.503/" class="social-card" target="_blank"><span class="s-icon">f</span><span class="s-name">Facebook</span></a>
+        <a href="https://x.com/RuzanaKhan369" class="social-card" target="_blank"><span class="s-icon">𝕏</span><span class="s-name">X / Twitter</span></a>
+        <a href="https://bd.linkedin.com/in/ruzana-khan-238397257" class="social-card" target="_blank"><span class="s-icon">in</span><span class="s-name">LinkedIn</span></a>
+        <a href="https://github.com/Ruzana-Kan" class="social-card" target="_blank"><span class="s-icon">⚡</span><span class="s-name">GitHub</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <span>Ruzana Khan</span> — Crafted with precision in Dhaka, Bangladesh</p>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
