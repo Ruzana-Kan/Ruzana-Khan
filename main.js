@@ -144,7 +144,7 @@ window.addEventListener('load',()=>{
 });
 
 /* ── CERTIFICATE CAROUSEL ── */
-const certificateImages=['20.jpg','16.png','9.png','12.png','13.jpg','24.jpg','14.png','22.jpg','8.jpg','21.jpg','29.png','27.png','25.jpg','28.jpg','1.jpeg','18.png','15.jpg','26.jpg','3.png','5.png','23.jpg','6.jpg','7.png','30.png','2.jpg','4.jpg','11.jpg','17.jpg','19.jpg','31.jpg','32.jpeg','33.jpeg','34.jpeg','35.jpeg','36.jpeg'];
+const certificateImages=['20.jpg','16.png','9.png','12.png','13.jpg','24.jpg','14.png','22.jpg','8.jpg','21.jpg','29.png','27.png','25.jpg','28.jpg','1.jpeg','18.png','15.jpg','26.jpg','3.png','5.png','23.jpg','6.jpg','7.png','30.png','2.jpg','4.jpg','11.jpg','17.jpg','19.jpg','31.jpg','32.jpeg','33.jpeg','34.jpeg','35.jpeg','36.jpeg' ,'37.jpeg' ,'38.jpeg'];
 let currentIndex=0;
 const track=document.getElementById('carouselTrack'),prevBtn=document.getElementById('prevBtn'),nextBtn=document.getElementById('nextBtn'),dotsContainer=document.getElementById('carouselDots'),counter=document.getElementById('counter'),lightbox=document.getElementById('lightbox'),lightboxImage=document.getElementById('lightboxImage'),lightboxClose=document.getElementById('lightboxClose');
 function getCP(){return window.innerWidth<769?1:window.innerWidth<1025?2:3}

@@ -201,7 +201,7 @@ nav.scrolled{background:rgba(4,4,10,.85);backdrop-filter:blur(24px);border-botto
 .lang-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--text);margin-bottom:.3rem}
 .lang-level{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--text3);text-transform:uppercase}
 .lang-bar{height:2px;border-radius:2px;background:var(--border);margin-top:1rem;overflow:hidden}
-.lang-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent1),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.34,1.12,.64,1) .3s}
+.lang-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent1),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.34,1.12,.64,1) .5s}
 .lang-card.visible .lang-fill{transform:scaleX(1)}
 
 /* ── CONTACT ── */
