@@ -1,0 +1,5 @@
+https://ruzana-kan.github.io/Ruzana-Khan/
+User-agent: *
+Allow: /
+
+Sitemap: https://ruzana-kan.github.io/Ruzana-Khan/sitemap.xml
