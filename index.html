@@ -56,7 +56,7 @@
 .chp .hero-a,.chp .hero-b{position:relative;padding-block:60px}
 .chp#craft .st{padding:100px 20px}.chp .orbit{display:none}
 .chp#skills .st,.chp#about .st,.chp#awards .st{padding-top:100px;padding-bottom:60px}
-#loader{display:none!important}.fade,.lt{opacity:1!important}.hero-b{opacity:1}.name .sr{position:static!important;width:auto;height:auto;clip:auto;font:300 56px/1.05 "Cormorant Garamond",serif;white-space:normal}.ay{position:relative!important;opacity:1!important;transform:none!important}.sw i{transform:none!important;opacity:1!important}.brk:before,.brk:after{display:none}#scene,#cur,#bg{display:none}.gc:before,.gc:after{display:none}.gc{color:var(--ink)}</style></noscript>
+#loader{display:none!important}.fade,.lt{opacity:1!important}.hero-b{opacity:1}.name .sr{position:static!important;width:auto;height:auto;clip:auto;font:300 56px/1.05 "Cormorant Garamond",serif;white-space:normal}.ay{position:relative!important;opacity:1!important;transform:none!important}.sw i{transform:none!important;opacity:1!important}.brk:before,.brk:after{display:none}#scene,#cur,#bg,#snd{display:none}.gc:before,.gc:after{display:none}.gc{color:var(--ink)}</style></noscript>
 <link rel="stylesheet" href="main.css">
 </head>
 <body class="loading">
@@ -67,6 +67,7 @@
 <div id="cur" aria-hidden="true"><i class="r"></i><i class="d"></i></div>
 <div id="prog"></div>
 <button id="totop" type="button" aria-label="Back to top">&uarr;</button>
+<button id="snd" type="button" aria-label="Toggle sound" aria-pressed="false"><span class="eq"><i></i><i></i><i></i><i></i></span><span id="sndt">Sound off</span></button>
 <header class="top" id="top"><b class="grad">RK</b><a class="l h" href="#about">About</a><a class="l h" href="#skills">Skills</a><a class="l h" href="#journey">Journey</a><a class="l h" href="#awards">Awards</a><a class="l h" href="#reviews">Reviews</a><a class="l" href="#contact">Contact</a></header>
 <aside id="scene" aria-label="Chapter navigation"><div class="dots" id="dots"></div><div class="nav"><button id="pvc" aria-label="Previous chapter">&lsaquo;</button><div class="mc" aria-hidden="true"><div id="mcb"><i></i><i></i><i></i><i></i></div></div><span class="cn" id="cnt">01 / 09</span><button id="nxc" aria-label="Next chapter">&rsaquo;</button></div></aside>
 
@@ -158,5 +159,6 @@
 <div class="lb" id="lb"><button id="lcl" aria-label="Close">&times;</button><img id="li" src="" alt="Certificate enlarged"></div>
 
 <script src="main.js"></script>
-</body>
-</html>
+
+<!-- ============ SOUND: soft lullaby + gentle effects (Web Audio) ============ -->
+<script src="sound.js"></script></body></html>
