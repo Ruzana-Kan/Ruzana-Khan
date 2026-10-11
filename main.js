@@ -93,3 +93,54 @@ x.fillStyle="rgba("+p.c+",.7)";x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()
 for(var j=i+1;j<ps.length;j++){var q=ps[j],ex=p.x-q.x,ey=p.y-q.y,e2=ex*ex+ey*ey;if(e2<10000){x.strokeStyle="rgba("+p.c+","+(.16*(1-e2/10000)).toFixed(3)+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}}
 loop()})();
 })();
+(function(){"use strict";
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches,FINE=matchMedia("(hover:hover) and (pointer:fine)").matches;
+var WA="https://wa.me/8801577519347?text="+encodeURIComponent("Hi Ruzana! I found your portfolio and would like to connect.");
+var WAI='<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.39 4 15.02c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12.03 12.03 0 0 0 3.9.65C22.67 28.09 28 22.7 28 16.07 28 9.4 22.68 3 16.04 3Zm0 22.07c-1.2 0-2.38-.3-3.42-.87l-.5-.27-4.83.93.96-4.7-.3-.5a9.02 9.02 0 0 1-1.4-4.83c0-5 4.07-9.06 9.08-9.06 5 0 9.1 4.07 9.1 9.1 0 5-4.1 9.2-8.7 10.2Zm5-6.7c-.27-.14-1.6-.8-1.85-.88-.25-.1-.43-.14-.6.13-.18.27-.7.88-.85 1.06-.16.18-.32.2-.6.07-.27-.14-1.15-.42-2.2-1.35-.8-.72-1.35-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.14-.16.18-.27.27-.45.1-.18.05-.34-.02-.48-.07-.14-.6-1.46-.83-2-.22-.52-.44-.45-.6-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.12 2.8c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.2 1.25.18 1.72.1.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.12-.25-.2-.52-.34Z"/></svg>';
+ 
+/* ---- WhatsApp: floating button + contact card + social link ---- */
+var f=document.createElement("a");f.id="wa";f.href=WA;f.target="_blank";f.rel="noopener";f.setAttribute("aria-label","Chat with Ruzana on WhatsApp");f.innerHTML=WAI+"<span>Chat on WhatsApp</span>";document.body.appendChild(f);
+var mail=document.querySelector('a.ci[href^="mailto"]');
+if(mail){var c=document.createElement("a");c.className="ci wa";c.href=WA;c.target="_blank";c.rel="noopener";c.innerHTML="<i>"+WAI+"</i><div><small>WhatsApp</small>+880 1577519347</div>";mail.parentNode.insertBefore(c,mail.nextSibling)}
+var sg=document.querySelector("#contact .sg");
+if(sg){var s=document.createElement("a");s.href=WA;s.target="_blank";s.rel="me noopener";s.textContent="WhatsApp";sg.appendChild(s)}
+var big=document.querySelector("#contact .mono.chn");
+if(big){var w=document.createElement("span");w.className="wave";w.textContent=" \uD83D\uDC4B";big.appendChild(w)}
+ 
+if(RM)return;
+ 
+/* ---- tab title gets a little personality ---- */
+var T0=document.title;document.addEventListener("visibilitychange",function(){document.title=document.hidden?"Come back! \uD83E\uDD4B Ruzana is waiting":T0});
+ 
+/* ---- effects canvas: confetti, emoji, sparkles ---- */
+var cv=document.createElement("canvas");cv.setAttribute("aria-hidden","true");cv.style.cssText="position:fixed;inset:0;width:100%;height:100%;z-index:265;pointer-events:none";document.body.appendChild(cv);
+var x=cv.getContext("2d"),W=0,H=0,P=[],run=false,COL=["#c084fc","#67e8f9","#f0abfc","#34d399","#fbbf24"];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+function kick(){if(!run){run=true;requestAnimationFrame(step)}}
+function burst(px,py,n,emo){for(var i=0;i<n;i++){var a=Math.random()*6.283,sp=3+Math.random()*8;P.push({x:px,y:py,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-5,r:Math.random()*6.283,vr:(Math.random()-.5)*.35,s:5+Math.random()*6,c:COL[i%5],e:emo&&Math.random()<.4?emo[i%emo.length]:null,l:1,d:.011})}kick()}
+function spark(px,py){P.push({x:px,y:py,vx:(Math.random()-.5)*1.2,vy:(Math.random()-.5)*1.2+.3,r:0,vr:0,s:3+Math.random()*3,c:COL[Math.floor(Math.random()*5)],star:true,l:1,d:.035});kick()}
+function step(){x.clearRect(0,0,W,H);for(var i=P.length-1;i>=0;i--){var p=P[i];p.x+=p.vx;p.y+=p.vy;if(!p.star){p.vy+=.28;p.vx*=.99}p.r+=p.vr;p.l-=p.d;if(p.l<=0||p.y>H+40){P.splice(i,1);continue}
+x.save();x.globalAlpha=Math.min(1,p.l*1.6);x.translate(p.x,p.y);x.rotate(p.r);
+if(p.e){x.font=(p.s*3)+"px serif";x.textAlign="center";x.fillText(p.e,0,0)}else{x.fillStyle=p.c;if(p.star){x.shadowColor=p.c;x.shadowBlur=10;x.beginPath();x.arc(0,0,p.s/2,0,6.283);x.fill()}else x.fillRect(-p.s/2,-p.s/3,p.s,p.s*.6)}x.restore()}
+if(P.length)requestAnimationFrame(step);else{run=false;x.clearRect(0,0,W,H)}}
+function pop(t,px,py){var d=document.createElement("div");d.className="fxp";d.textContent=t;d.style.left=px+"px";d.style.top=py+"px";document.body.appendChild(d);setTimeout(function(){d.remove()},1400)}
+ 
+/* ---- click rewards ---- */
+var ROLE={"Taekwondo Champion":["HIYAH!",["\uD83E\uDD4B","\uD83E\uDD47","\uD83D\uDCA5"]],"Software Engineer":["Compiled!",["\uD83D\uDCBB","\u2728","\uD83D\uDE80"]],"Web Developer":["Deployed!",["\uD83C\uDF10","\uD83C\uDFA8","\u26A1"]],"Digital Marketer":["Trending!",["\uD83D\uDCC8","\uD83D\uDCE3","\uD83D\uDD25"]]};
+document.addEventListener("click",function(e){
+  var r=e.target.closest&&e.target.closest(".rl");
+  if(r){var o=ROLE[r.textContent.trim()]||["Yay!",["\u2728"]];pop(o[0],e.clientX,e.clientY);burst(e.clientX,e.clientY,34,o[1]);return}
+  if(e.target.closest("#top b")){pop("Hello!",e.clientX,e.clientY+30);burst(e.clientX,e.clientY+20,40,["\u2728","\uD83D\uDC9C"]);return}
+  var sb=e.target.closest&&e.target.closest(".sb");
+  if(sb){var rc=sb.getBoundingClientRect();burst(rc.left+rc.width/2,rc.top+rc.height/2,30,["\u2B50","\uD83C\uDF89"]);return}
+  if(e.target.closest("#ldgo"))burst(innerWidth/2,innerHeight/2,50,["\uD83C\uDF89","\u2728"]);
+});
+ 
+/* ---- sparkle trail (mouse) and tap sparkles (touch) ---- */
+if(FINE){var lt=0;addEventListener("pointermove",function(e){var n=performance.now();if(n-lt<45)return;lt=n;if(e.target.closest&&e.target.closest("#awards"))return;spark(e.clientX,e.clientY)})}
+addEventListener("pointerdown",function(e){if(e.pointerType==="mouse"||(e.target.closest&&e.target.closest("#awards")))return;for(var i=0;i<6;i++)spark(e.clientX,e.clientY)});
+ 
+
+/* ---- tiny hint so people discover the fun ---- */
+var sub=document.querySelector(".sub");if(sub){var h=document.createElement("span");h.className="tip";h.textContent="Psst, tap my titles";sub.appendChild(h)}
+})();
